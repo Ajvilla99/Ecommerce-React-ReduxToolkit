@@ -13,7 +13,9 @@ export const Navbar = () => {
       <div className='menu-top w-full pt-[40px] pb-[20px] px-[10%] flex justify-between items-center'>
         {/* Logo */}
         <div className='logo-container w-[10%]'>
-          <Link className='h-[45px] border-2 flex items-center justify-center'>
+          <Link 
+            to={'/'}
+            className='h-[45px] border-2 flex items-center justify-center'>
             LOGO
           </Link>
         </div>
@@ -58,7 +60,9 @@ export const Navbar = () => {
             <Link className='w-[45px] h-[45px] flex items-center justify-center bg-[#ffffff] rounded-[8px]'>
               <MdNotificationsNone className='text-[24px]'/>
             </Link>
-            <Link className='w-[45px] h-[45px] flex items-center justify-center bg-[#ffffff] rounded-[8px]'>
+            <Link 
+              to={'/cart'}
+              className='w-[45px] h-[45px] flex items-center justify-center bg-[#ffffff] rounded-[8px]'>
               <IoCartOutline className='text-[24px]'/>
             </Link>
           </div>
@@ -66,16 +70,24 @@ export const Navbar = () => {
       </div>
       {/* Navbar */}
       <div className='w-full flex justify-center'>
-        <div className='nav-container w-[80%] h-[80px] mt-8 bg-[#eee] rounded-[16px] flex items-center justify-end px-[40px]'>
+        <div className='nav-container w-[80%] h-[80px] mt-8 bg-[#eee] rounded-[16px] flex items-center justify-center px-[40px]'>
           <div className='hidden'>
             {/* <BsGrid /> */}
           </div>
-          <nav className=''>
-            <ul className='flex gap-4 nav-ul'>
-              <li className='h-full text-center text-gray-200 uppercase font-semibold'><Link className='max-w-full flex items-center justify-center relative link-nav'>Home</Link></li>
-              <li className='h-full text-center text-gray-200 uppercase font-semibold'><Link className='max-w-full flex items-center justify-center relative link-nav'>Categorias</Link></li>
-              <li className='h-full text-center text-gray-200 uppercase font-semibold'><Link className='max-w-full flex items-center justify-center relative link-nav'>Men</Link></li>
-              <li className='h-full text-center text-gray-200 uppercase font-semibold'><Link className='max-w-full flex items-center justify-center relative link-nav'>Woman</Link></li>
+          <nav className='lg:w-[610px]'>
+            <ul className='flex gap-4 nav-ul lg:justify-between '>
+              <li className='h-full text-center text-gray-200 uppercase font-semibold'>
+                <Link className='max-w-full flex items-center justify-center relative link-nav'>Home</Link>
+              </li>
+              <li className='h-full text-center text-gray-200 uppercase font-semibold'>
+                <Link className='max-w-full flex items-center justify-center relative link-nav'>Categorias</Link>
+              </li>
+              <li className='h-full text-center text-gray-200 uppercase font-semibold'>
+                <Link className='max-w-full flex items-center justify-center relative link-nav'>Men</Link>
+              </li>
+              <li className='h-full text-center text-gray-200 uppercase font-semibold'>
+                <Link className='max-w-full flex items-center justify-center relative link-nav'>Woman</Link>
+              </li>
             </ul>
           </nav>
         </div>
