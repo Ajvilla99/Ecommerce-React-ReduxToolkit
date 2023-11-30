@@ -10,7 +10,6 @@ import { SectionDiscount } from '../components/SectionDiscount';
 export const Home = () => {
   return (
     <>
-      <Navbar />
       <Slider />
       <SliderSection data={products} />
       <SectionDiscount />
