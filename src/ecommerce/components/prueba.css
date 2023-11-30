@@ -1,0 +1,16 @@
+@media (min-width: 1024px) {
+    .gridprueba {
+            max-width: 1080px;
+            display: flex;
+            flex-wrap: wrap;
+            height: 650px;
+    }
+    .gridprueba:nth-child(3) {
+        display: block;
+        flex-grow: 0;
+        flex-shrink: 1;
+        flex-basis: auto;
+        align-self: auto;
+        order: 0;
+      }
+}

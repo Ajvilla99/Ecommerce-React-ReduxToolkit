@@ -1,0 +1,24 @@
+.swiper-pagination-bullet-active {
+    background-color: #3a3e4a; /* Cambia el color de fondo para la página activa según tus preferencias */
+  }
+.swiper-button-prev {
+  top: 50%;
+}
+.swiper-button-next {
+  top: 50%;
+}
+
+@media (max-width: 640px) {
+  .swiper-slider {
+    width: 90%;
+    max-width: 90%;
+  }
+  .swiper-button-prev {
+    left: 7px;
+    top: 52.5%;
+  }
+  .swiper-button-next {
+    right: 7px;
+    top: 52.5%;
+  }
+}

@@ -1,0 +1,6 @@
+@media (max-width: 640px) {
+    .product-card {
+        max-width: 100%;
+        max-height: 312px;
+    }
+}
