@@ -1,28 +1,31 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import './ProductCard.css'
+import { Link } from 'react-router-dom';
 
 export const ProductCard = ({ data }) => {
 
+    const { name, price, imageUrl, id } = data;
     
-    const { name, price, imageUrl } = data;
+    const pruebaRef = useRef(null);
+    const getProductId = (productId) => {
+        console.log(productId)
+        pruebaRef.current.click()
+    }
 
   return (
-    <div className='product-card w-[200px] max-w-[200px] h-[360px] flex flex-col justify-between rounded-[16px] overflow-hidden bg-white'>
-        <div className='w-full'>
-            <img src={imageUrl} alt="" className='w-full'/>
-        </div>
-        <div className='w-full min-h-[85px]'>
-            <div className='h-full flex flex-col px-2 items-center justify-around lg:justify-between'>
-                <h4 className="text-[16px] font-medium text-center line-clamp-2">{name}</h4>
-                <div className=''>
-                    <span className='text-[16px]'>$ {price}</span>
-                </div>
+    <div onClick={() => getProductId(id)} className='w-full max-w-[200px] h-64 overflow-hidden rounded-md bg-white shadow-lg cursor-pointer
+                    lg:h-80 lg:max-w-[220px] lg:hover:shadow-xl lg:duration-300 lg:rounded-lg'>
+        <div className='w-full h-full'>
+            <div className='w-full h-2/3 flex justify-center'>
+                <img src={imageUrl} alt="" className='object-contain max-h-full max-w-full'/>
+            </div>
+            <div className='bg-white h-[calc(100%-66%)] flex flex-col items-center justify-around p-3'>
+                <p className='text-sm text-gray-200 line-clamp-1
+                              lg:line-clamp-2 lg:text-center'>{name}</p>
+                <p className='text-lg text-gray-200 font-medium'>$ {price}</p>
+                <Link ref={pruebaRef} to={'/product'} className='hidden'></Link>
             </div>
         </div>
-        <button className='bg-gray-200 text-gray-100 p-[13px] h-[50px] w-[100%] relative'>
-            Comprar ahora
-            <span className='animation-btn-shop'></span>
-        </button>
     </div>
   )
 }

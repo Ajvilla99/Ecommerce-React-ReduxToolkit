@@ -2,10 +2,12 @@
     background-color: #3a3e4a; /* Cambia el color de fondo para la página activa según tus preferencias */
   }
 .swiper-button-prev {
-  top: 50%;
+  top: 55%;
+  color: #3a3e4a;
 }
 .swiper-button-next {
-  top: 50%;
+  top: 55%;
+  color: #3a3e4a;
 }
 
 @media (max-width: 640px) {

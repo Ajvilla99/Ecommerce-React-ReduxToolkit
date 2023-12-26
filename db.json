@@ -1,0 +1,46 @@
+{
+    "categories": [
+        {
+            "id": "1",
+            "name": "televisores",
+            "img": "",
+            "": ""
+        },
+        {
+            "id": "2",
+            "name": "ropa",
+            "img": "",
+            "": ""
+        },
+        {
+            "id": "3",
+            "name": "vehiculos",
+            "img": "",
+            "": ""
+        },
+        {
+            "id": "4",
+            "name": "Belleza y cuidado",
+            "img": "",
+            "": ""
+        },
+        {
+            "id": "5",
+            "name": "Celulares y telefonos",
+            "img": "",
+            "": ""
+        },
+        {
+            "id": "6",
+            "name": "computacion",
+            "img": "",
+            "": ""
+        },
+        {
+            "id": "7",
+            "name": "consolas y videojuegos",
+            "img": "",
+            "": ""
+        }
+    ]
+}
