@@ -6,14 +6,18 @@ import { FaUser, FaAngleDown  } from "react-icons/fa6";
 import { IoCartOutline } from "react-icons/io5";
 import { MdNotificationsNone } from "react-icons/md";
 import { FaRegHeart } from "react-icons/fa";
+import { useState } from 'react';
 
 
 export const Navbar = () => {
+
+  const [ handleNav, setHandlreNav] = useState(false)
+
   return (
     <header className='w-full min-h-[140px] flex justify-center pt-2
                        xl:mt-5'>
       <div className='w-11/12 flex flex-col gap-2
-                      
+                      lg:
                       xl:w-[1200px] '>
     {/* ---- Menu Top ---- */}
         <div className='flex flex-wrap justify-between
@@ -65,14 +69,17 @@ export const Navbar = () => {
         {/* ---- Navbar ---- */}
           <div className='w-full h-full relative order-2 text-left 
                           xl:w-[calc(100%-440px)]'>
-            <button className='h-full text-4xl text-gray-200
+            <button 
+              onClick={() => setHandlreNav(!handleNav)}
+              className='h-full text-4xl text-gray-200
                                lg:hidden'>
               <LuMenu/>
             </button>
-            <nav className='w-[calc(100vw-5%)] left-[-5%] overflow-hidden absolute
+            <nav className='w-[calc(100vw-5%)] left-[-8%] z-10 overflow-hidden absolute
                             xl:w-full xl:h-full xl:static'>
-              <ul className='w-full h-0 text-center flex flex-col gap-0 bg-gray-200
-                             xl:h-full xl:flex-row xl:justify-around xl:items-center xl:bg-transparent'>
+              <ul className={`w-full text-center flex flex-col gap-0 bg-gray-200 duration-300
+                             xl:h-full xl:flex-row xl:justify-around xl:items-center xl:bg-transparent
+                             ${ handleNav ? 'h-[300px]' : 'h-0' }`}>
                 <li className='h-12'>
                   <Link to={'categories'}
                     className='capitalize w-full h-full flex items-center justify-center bg-gray-200 hover:bg-gray-600 text-gray-300

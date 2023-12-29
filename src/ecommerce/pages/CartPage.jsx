@@ -1,7 +1,12 @@
+import { useState } from "react"
+import { useCounter } from "../../hooks/useCounter"
 
 
 
 export const CartPage = () => {
+
+  const { counter, increment, decrement }  = useCounter()
+
   return (
     <section className="w-full flex flex-wrap items-center justify-center mt-4">
       <div className="w-full min-h-[calc(100vh-200px)] lg:w-[90%] flex flex-col items-center justify-between flex-wrap gap-4
@@ -22,7 +27,7 @@ export const CartPage = () => {
                 </div>
                 {/* text and buttons */}
                 <div className="flex flex-col gap-2">
-                  <span className="line-clamp-1 text-[12px]">Bascula Digital De Peso Corasdasdasdasd</span>
+                  <span className="line-clamp-1 text-[12px]">Bascula Digital De Peso Corporal</span>
                   <div className="flex gap-4">
                     <button className="text-sm capitalize text-[#3483fa]">eliminar</button>
                     <button className="text-sm capitalize text-[#3483fa]">guardar</button>
@@ -31,11 +36,15 @@ export const CartPage = () => {
               </div>
               <div className="h-1/2 bg-white flex items-center justify-around">
                 <div className="h-[40px] w-[100px] bg-white shadow-md rounded-sm flex items-center justify-center border-gray-300 border-2">
-                  <button className="h-full w-1/3">-</button>
+                  <button 
+                    onClick={() => decrement()}
+                    className="h-full w-1/3">-</button>
                   <div className="h-full w-1/3 flex items-center justify-center">
-                    <span className="">0</span>
+                    <span className="">{counter}</span>
                   </div>
-                  <button className="h-full w-1/3">+</button>
+                  <button 
+                    onClick={() => increment()}
+                    className="h-full w-1/3">+</button>
                 </div>
                 <div>
                   <span className="font-light text-xl">$ 33300</span>
@@ -46,14 +55,15 @@ export const CartPage = () => {
         </div>
 
         {/* Confirmar pago */}
-        <div className="w-full min-h-20 flex flex-col gap-2 items-center py-[20px] bg-white rounded-lg sticky bottom-0 shadow-[0px_-10px_20px_10px_#00000024]
+        <div className="w-full min-h-20 flex flex-col gap-2 items-center py-5 bg-white rounded-lg sticky bottom-0 shadow-[0px_-10px_20px_10px_#00000024]
                         xl:w-[30%] xl:shadow-none xl:pt-0 xl:top-0">
-          <div className="w-full h-16 flex border-b-1 p-[15px] border-b-[1px] border-gray-100">
+          <div className="w-full h-10 flex border-b-1 indent-4 border-b-[1px] border-gray-100
+                          lg:h-16 lg:py-5">
             <h3 className="capitalize text-gray-200 font-medium">Resumen de compra</h3>
           </div>
           <div className="flex w-11/12 text-gray-200 justify-between
                           xl:w-10/12">
-            <span className="capitalize xl:text-sm">productos{ `(1)` }</span>
+            <span className="capitalize xl:text-sm">productos{ `(0)` }</span>
             <span className="">
               <span>$ </span>
               457.856
@@ -61,7 +71,7 @@ export const CartPage = () => {
           </div>
           <div className="flex w-11/12 text-gray-200 justify-between
                           xl:w-10/12">
-            <span className="capitalize xl:text-sm">enviós</span>
+            <span className="capitalize xl:text-sm">envió</span>
             <span className="">
               <span>$ </span>
               0

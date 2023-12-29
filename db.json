@@ -3,43 +3,43 @@
         {
             "id": "1",
             "name": "televisores",
-            "img": "",
+            "imgURL": "https://i.imgur.com/zI7MAeL.png",
             "": ""
         },
         {
             "id": "2",
             "name": "ropa",
-            "img": "",
+            "imgURL": "",
             "": ""
         },
         {
             "id": "3",
             "name": "vehiculos",
-            "img": "",
+            "imgURL": "",
             "": ""
         },
         {
             "id": "4",
             "name": "Belleza y cuidado",
-            "img": "",
+            "imgURL": "",
             "": ""
         },
         {
             "id": "5",
             "name": "Celulares y telefonos",
-            "img": "",
+            "imgURL": "",
             "": ""
         },
         {
             "id": "6",
             "name": "computacion",
-            "img": "",
+            "imgURL": "",
             "": ""
         },
         {
             "id": "7",
             "name": "consolas y videojuegos",
-            "img": "",
+            "imgURL": "",
             "": ""
         }
     ]

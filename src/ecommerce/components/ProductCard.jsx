@@ -23,7 +23,7 @@ export const ProductCard = ({ data }) => {
                 <p className='text-sm text-gray-200 line-clamp-1
                               lg:line-clamp-2 lg:text-center'>{name}</p>
                 <p className='text-lg text-gray-200 font-medium'>$ {price}</p>
-                <Link ref={pruebaRef} to={'/product'} className='hidden'></Link>
+                <Link ref={pruebaRef} to={`/product/${ id }`} className='hidden'></Link>
             </div>
         </div>
     </div>
