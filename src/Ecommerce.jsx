@@ -6,11 +6,7 @@ import { store } from './store/store';
 
 export const Ecommerce = () => {
   return (
-    <Provider store={ store }>
-      <BrowserRouter>
-          <AppRouter />
-      </BrowserRouter>
-    </Provider> 
+      <AppRouter />
   );
 }
 
