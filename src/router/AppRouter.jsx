@@ -3,9 +3,7 @@ import { Route, Routes } from 'react-router-dom'
 import { Home, CartPage } from '../ecommerce/pages'
 import { Footer, Navbar } from '../ecommerce/components'
 import { CategoriesPage } from '../ecommerce/pages/CategoriesPage'
-import { LoginPage } from '../auth/pages/LoginPage'
-import { RegisterPage } from '../auth/pages/RegisterPage'
-// import { CartPage } from '../ecommerce/pages/CartPage'
+import { LoginPage, RegisterPage } from '../auth/pages'
 
 export const AppRouter = () => {
 

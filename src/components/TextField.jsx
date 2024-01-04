@@ -1,12 +1,12 @@
 import React from 'react'
 
-export const TextField = ({ name, value, onChange, placeholder, error = true, helperText }) => {
+export const TextField = ({ type, name, value, onChange, placeholder, error = true, helperText }) => {
 
   return (
     <div className='w-full min-h-[48px]'>
         <div className='w-full'>
             <input
-                type="text"
+                type={type}
                 name={name}
                 value={value}
                 onChange={ onChange }

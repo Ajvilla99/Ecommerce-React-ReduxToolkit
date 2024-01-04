@@ -23,10 +23,15 @@ module.exports = {
           100: '#e84917',
           200: '#d64749',
         },
+        error: {
+          100: '#efb4ba',
+          200: '#bb303e'
+        },
         primary: '#18314f',
         secundary: '#1772f9',
         succes: '#3c89fd',
         succes_hover: '#3c89fd',
+
       },
     },
   },
